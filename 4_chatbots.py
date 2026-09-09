@@ -5,7 +5,9 @@ st.title("④ 金融教育 模擬授業シミュレーター")
 st.write("生徒役のAIとの対話を通じて、授業での「説明力」や「生徒との対話力」をトレーニングします。")
 
 # --- APIキーの取得 ---
-api_key = st.secrets.get("GEMINI_API_KEY", "").strip()
+# Renderの環境変数(os.environ)から取得
+api_key = os.environ.get("GEMINI_API_KEY")
+# api_key = st.secrets.get("GEMINI_API_KEY", "").strip()
 
 if not api_key:
     st.error("【エラー】APIキーが読み込めていません。`.streamlit/secrets.toml` を確認してください。")
