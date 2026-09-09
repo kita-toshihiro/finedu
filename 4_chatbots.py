@@ -1,5 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
+import os
 
 st.title("④ 金融教育 模擬授業シミュレーター")
 st.write("生徒役のAIとの対話を通じて、授業での「説明力」や「生徒との対話力」をトレーニングします。")
